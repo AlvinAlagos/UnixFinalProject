@@ -6,7 +6,7 @@
 My scenario for this project was to fully set up a GNU/Linux web server and deploy websites online. The web server will be hosted by a VPS that i chose and the provider is digital ocean. When it comes to handling the vps i would have to perform basic sysadmin tasks such as create user, ssh authentication, system upgrade, etc. As for the website contents it will be my final project in the internet programming class.
 
 ## Decision: 
-So i had chosen two solutions for my scenario, and it was to either let apache2 or nginx run my website. After doing some research on both of them, i came to the conlcusion to use nginx since it is faster compared to apache2.
+So i had chosen two solutions for my scenario, and it was to either let apache2 or nginx to deploy my website. After doing some research on both of them, i learnt that apache2 is known as being flexible which means it has tools and packages that nginx does not have and also has a decent speed. But after looking at comparisons between both of them, i decided to go with nginx since it is faster compared to apache2.
 
 ## Git Respository: 
 Currently in my Git repository, you will find my journals and install file which are the steps to following how i set up my website. There is also the license and a readme file where you will find the explanation of my scenario.
