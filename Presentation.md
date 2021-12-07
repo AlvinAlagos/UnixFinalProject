@@ -3,7 +3,8 @@
 - Alvin Alagos Eli
 
 ## Scenario:
-So the chosen scenario i had for this project was to host a web server on a Virtual Private server. On the web server i will be running my website that was developed in my internet programming class
+My scenario for this project was to fully set up a GNU/Linux web server and deploy websites online. The web server will be hosted by a VPS that i chose and the provider is digital ocean. When it comes to handling the vps i would have to perform basic sysadmin tasks such as create user, ssh authentication, system upgrade, etc. As for the website contents it will be my final project in the internet programming class.
+
 ## Decision: 
 So i had chosen two solutions for my scenario, and it was to either let apache2 or nginx run my website. After doing some research on both of them, i came to the conlcusion to use nginx since it is faster compared to apache2.
 
