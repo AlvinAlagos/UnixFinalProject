@@ -18,8 +18,7 @@ As for my automated task, i haven't actually decided yet on what kind of task i 
 For the major struggles of this project experience, it was very confusing on what i was gonna be developing at first. I didn't really understood any instructions but i was able to understand a bit more as time advanced. 
 
 ## Major Achievements: 
-While working on the VPS and web servers, i was able to learn more about them and i can see more potential projects i could do with them like maybe host a server for games for me and some friends.
-
+While working on the VPS and web servers, i was able to learn more about them and understand more about them.
 ## Lesson Learned from the project
 With this project i kinda procastinated when it came to working on it. So my lesson from this project was to manage time properly.
 
