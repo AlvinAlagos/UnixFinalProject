@@ -24,18 +24,16 @@ users who have the key can access the VPS. Use command $sudo nano /etc/ssh/sshd_
 
 11. Reload the sshd sevice by running the command $sudo systemctl reload sshd.
 
-12. Now you wanna provide the website contents. For that download your website with all of its html,css,js scripts. Go to the directory where it is stored 
-with the $cd command. Make sure the files are in a zip folder. Then you want to run the command $sudo scp file.zip root@server_address:/var/www/html . It will prompt you
-for the root password so make sure you have it.
+12. Now you wanna provide the website contents. For that download your website with all of its html,css,js scripts. We will be setting it up the repository in the /var/www/html repository then create an automated task which will keep your website up to date if any changes are made. So return into to your VPS using ssh.
 
-13.Log back in to your VPS connection as the user you created, and change directory to $cd /var/www/html. You will a default html file and your zip folder. Delete the default file with
-$sudo rm filename.html.
+13. Before deploying the website, make sure that there are two copies of your home page or which ever page that will be loaded first when going on your website. One copy with the original name and another named index.html so the web server can detect the index file and set it up.
 
-14. Next we're going to want to unzip the folder. In order to unzip the folder, you have to use $sudo apt install unzip to download the unzip package. Once installed run the command
-$sudo unzip Folder.zip
+14. Now change directory using $cd /var/www/html and using the command $git pull to retrieve your repository.
 
-15. Use the $ls command to double check that all files have been unzipped. You can remove the folder if you want to so it does not take more storage using the $sudo rm -R Foler.zip command.
+15. Once you have your repository, copy the contents of the of your websites folder and paste it on the /var/www/html directory. Use this command $sudo cp -a /var/www/html/-RepositoryFolder/-WebsiteFolder/. /var/www/html this will copy your websites files to the html directory. You can now load your VPS on a browser and you will be able to see your website.
 
-16. Now if you try to search for your website on a browser with the ipv4, you will shown  an Error. You have to rename your main html file to index.html file in order to detect it. But if ever you have
-multiple pages and your new index.html file is the home page. Make sure to add it back into the /var/www/html directory. Use the same command $sudo scp filename user@server_address:/var/www/html
+16. Now we will be moving onto the automated task
+
+
+
  
