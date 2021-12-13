@@ -8,3 +8,24 @@ Now the solutions i have for hosting a web server is, i either use Apache2 or Ng
 
 ## NGINX
 
+PROS:
+  - Better at handling static content
+  - Better Scalability
+  - It was recommended for sites running on a VPS
+
+CONS:
+  - Less extensive list of modules
+
+## Apache2
+
+PROS: 
+  - Greater selection of modules
+  - Better Suited for shared hosting
+  - Administrative console
+
+Cons: 
+  - Consumes more RAM under heavier load
+  - Spawns new processes fore ach requeset making things less effective
+
+## DECISION:
+So i dedcided to go with NGINX because it terms of speed, NGINX  beats apache2 . For the webserver i prioritize more speed than a greater list of modules for this project. And i don't like that apache spawns new processses every time a request is made. NGINX will keep it at only one process
