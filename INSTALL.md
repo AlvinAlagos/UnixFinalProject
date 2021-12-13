@@ -1,4 +1,4 @@
-Steps to installing a web server on  VPS:
+Steps to setting up a GNU/Linux webserver and to deploy websites:
 
 1. Decide on which VPS provider you will choose to host your web server.
 
