@@ -24,15 +24,32 @@ users who have the key can access the VPS. Use command $sudo nano /etc/ssh/sshd_
 
 11. Reload the sshd sevice by running the command $sudo systemctl reload sshd.
 
-12. Now you wanna provide the website contents. For that download your website with all of its html,css,js scripts. We will be setting it up the repository in the /var/www/html repository then create an automated task which will keep your website up to date if any changes are made. So return into to your VPS using ssh.
+12. Now you wanna provide the website contents. For that download your website with all of its html,css,js scripts. We will be setting it up the repository in the /var/www/html directory of the VPS then create an automated task which will keep your website up to date if any changes are made. So return into to your VPS using ssh.
 
-13. Before deploying the website, make sure that there are two copies of your home page or which ever page that will be loaded first when going on your website. One copy with the original name and another named index.html so the web server can detect the index file and set it up.
+13. We will be using github as our repository, so install the git package before moving on to the next steps by using the commaand $sudo apt install git
 
-14. Now change directory using $cd /var/www/html and using the command $git pull to retrieve your repository.
+14. Before deploying the website, make sure that there are two copies of your home page or which ever page that will be loaded first when going on your website. One copy with the original name and another named index.html so the web server can detect the index file and set it up.
 
-15. Once you have your repository, copy the contents of the of your websites folder and paste it on the /var/www/html directory. Use this command $sudo cp -a /var/www/html/-RepositoryFolder/-WebsiteFolder/. /var/www/html this will copy your websites files to the html directory. You can now load your VPS on a browser and you will be able to see your website.
+15. Now change directory using $cd /var/www/html and using the command $git pull to retrieve your repository.
 
-16. Now we will be moving onto the automated task
+16. Once you have your repository, copy the contents of the of your websites folder and paste it on the /var/www/html directory. Use this command $sudo cp -a /var/www/html/-RepositoryFolder/-WebsiteFolder/. /var/www/html this will copy your websites files to the html directory. You can now load your VPS on a browser and you will be able to see your website.
+
+17. Now we will be moving onto the automated task. Will starting by creating the script as the root user because once we move to crontab it will usually ask for a password if you are using your other user. So run the command $nano yourScript_name.sh
+
+18. In the script you will enter these following commands: 
+#! /bin/bash
+
+$cd /var/www/html/Repository_Name
+$sudo git pull
+$cd /var/www/html
+$sudo rm *
+
+19. After inputting all of your commands in the script, we will be using crontab to automate it so that every sunday it will run the script.
+
+20. So run the command $crontab -e as root and input the following line: 0 6 * * 0 /root/file.sh  .So this command basically will run your bash script every sunday at 6:00 am.
+
+21. So those are all the steps needed to fully setup a GNU/Linux webserver and deploy websites online. Plus automating keeping the website up to date.
+
 
 
 
