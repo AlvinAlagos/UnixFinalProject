@@ -6,5 +6,5 @@ etc. This readme file will be updated as i progress through the project
 
 Now the solutions i have for hosting a web server is, i either use Apache2 or Nginx.
 
-##NGINX
+## NGINX
 
